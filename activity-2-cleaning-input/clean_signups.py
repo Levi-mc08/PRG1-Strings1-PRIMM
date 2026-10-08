@@ -1,10 +1,13 @@
 def clean(entry):
+    if entry[-1] == ".":
+        entry.pop[-1]
     return entry.strip().lower()
 
 
 signups = [
     "  Alice@Example.com ",
     "alice@example.com",
+    "ALICE@EXAMPLE.COM.",
     "BOB@example.com  ",
     "bob@Example.com",
     "carol@example.com",

@@ -15,11 +15,13 @@ def is_valid(code):
         return False
     if not code[4:].isdigit():
         return False
+    if code[4:6] == "00":
+        return False
 
     return True
 
 
-entered_codes = ["save2024", " SAVE1234 ", "SAVE12", "SALE1234", "SAVE12AB"]
+entered_codes = ["save0024", " SAVE0234 ", "SAVE12", "SALE1234", "SAVE12AB"]
 
 for entry in entered_codes:
     if is_valid(entry):
